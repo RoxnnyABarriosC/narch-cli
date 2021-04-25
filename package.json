@@ -1,0 +1,72 @@
+{
+  "name": "@narchjs/cli",
+  "version": "1.0.0",
+  "description": "Narch - Node Architecture framework (@cli)",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 10.13.0",
+    "npm": ">= 6.11.0"
+  },
+  "bin": {
+    "narch": "dist/bin/narch.js"
+  },
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "tsc": "tsc",
+    "build": "npm-run-all clean lint tsc",
+    "dev:start": "npm-run-all build start",
+    "dev": "nodemon --nolazy -L \"src\" -e ts,ejs --exec yarn dev:start",
+    "start": "ts-node src/bin/narch.ts",
+    "command": "npx ts-node src/bin/narch.ts"
+  },
+  "main": "src/bin/narch.ts",
+  "author": {
+    "email": "roxnny.barrios@gmail.com",
+    "name": "Roxnny A Barrios C",
+    "url": "https://github.com/RoxnnyABarriosC"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoxnnyABarriosC/narch-cli"
+  },
+  "homepage": "",
+  "dependencies": {
+    "@types/pascal-case": "^1.1.2",
+    "camel-case": "^4.1.2",
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "faker": "^5.1.0",
+    "lodash": "^4.17.21",
+    "npx": "^10.2.2",
+    "pascal-case": "^3.1.2",
+    "pluralize": "^8.0.0",
+    "reflect-metadata": "^0.1.13",
+    "snake-case": "^3.0.4",
+    "ts-jest": "^26.4.4",
+    "tslib": "^2.2.0",
+    "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.1.5",
+    "@types/fs-extra": "^8.1.0",
+    "@types/jest": "^26.0.16",
+    "@types/lodash": "^4.14.161",
+    "@types/pluralize": "^0.0.29",
+    "@types/shelljs": "^0.8.6",
+    "@types/supertest": "^2.0.10",
+    "fs-extra": "^8.1.0",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.9.1",
+    "tslint": "^6.0.0",
+    "typescript": "^4.0.5"
+  }
+}
