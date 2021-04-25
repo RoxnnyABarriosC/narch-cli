@@ -118,7 +118,7 @@ export default class PresentationFactory
 
     private async createListRequest(): Promise<void>
     {
-        this.filename = `List${this.config.moduleName}.request.ts`;
+        this.filename = `List${this.config.pluralName}.request.ts`;
 
         this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/List__name__.request.ts'), 'utf8');
 

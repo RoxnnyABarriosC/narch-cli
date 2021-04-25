@@ -66,7 +66,7 @@ export default class InterfaceAdaptersFactory
 
     private async createIRepository(): Promise<void>
     {
-        this.filename = `${this.config.moduleName}.sql.repository.ts`;
+        this.filename = `I${this.config.moduleName}.sql.repository.ts`;
 
         this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/I__name__.repository.ts'), 'utf8');
 
