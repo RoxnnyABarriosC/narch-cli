@@ -32,7 +32,10 @@
     }
   },
   "include": [
-    "src/**/*",
-    "./typings/*"
-  ]
+    "src/bin",
+    "src/commands",
+    "src/interfaces",
+    "src/templates/**/*.ts"
+  ],
+  "exclude": ["src/templates/**/files/*.ts"]
 }

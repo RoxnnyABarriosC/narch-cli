@@ -52,7 +52,7 @@ export default class DomainFactory
     {
         this.filename = `${this.config.moduleName}.entity.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.entity.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.entity.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -70,7 +70,7 @@ export default class DomainFactory
     {
         this.filename = `Get${this.config.moduleName}.useCase.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Get__name__.useCase.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Get__name__.useCase.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -88,7 +88,7 @@ export default class DomainFactory
     {
         this.filename = `List${this.config.pluralName}.useCase.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/List__name__.useCase.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/List__name__.useCase.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -106,7 +106,7 @@ export default class DomainFactory
     {
         this.filename = `Remove${this.config.moduleName}.useCase.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Remove__name__.useCase.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Remove__name__.useCase.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -124,7 +124,7 @@ export default class DomainFactory
     {
         this.filename = `Save${this.config.moduleName}.useCase.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Save__name__.useCase.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Save__name__.useCase.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -142,7 +142,7 @@ export default class DomainFactory
     {
         this.filename = `Update${this.config.moduleName}.useCase.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Update__name__.useCase.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Update__name__.useCase.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)

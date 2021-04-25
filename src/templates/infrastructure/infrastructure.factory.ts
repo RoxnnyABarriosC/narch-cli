@@ -41,7 +41,7 @@ export default class InfrastructureFactory
     {
         this.filename = `${this.config.moduleName}.sql.schema.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.sql.schema.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.sql.schema.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -60,7 +60,7 @@ export default class InfrastructureFactory
     {
         this.filename = `${this.config.moduleName}.sql.repository.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.sql.repository.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.sql.repository.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)

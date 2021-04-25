@@ -21,7 +21,8 @@
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --nolazy -L \"src\" -e ts,ejs --exec yarn dev:start",
     "start": "ts-node src/bin/narch.ts",
-    "command": "npx ts-node src/bin/narch.ts"
+    "command": "npx ts-node src/bin/narch.ts",
+    "command:dist": "node dist/bin/narch.js"
   },
   "main": "src/bin/narch.ts",
   "author": {
@@ -32,11 +33,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RoxnnyABarriosC/narch-cli"
+    "url": "https://github.com/RoxnnyABarriosC/narch-cli.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/RoxnnyABarriosC/narch-cli",
   "dependencies": {
-    "@types/pascal-case": "^1.1.2",
     "camel-case": "^4.1.2",
     "chalk": "^4.1.1",
     "commander": "^7.2.0",
@@ -56,6 +56,7 @@
     "@types/fs-extra": "^8.1.0",
     "@types/jest": "^26.0.16",
     "@types/lodash": "^4.14.161",
+    "@types/pascal-case": "^1.1.2",
     "@types/pluralize": "^0.0.29",
     "@types/shelljs": "^0.8.6",
     "@types/supertest": "^2.0.10",

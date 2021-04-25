@@ -34,5 +34,6 @@ module.exports = {
         'brace-style': ['error', 'allman'],
         'no-unused-vars': ['error', {'args': 'none'}],
         'prefer-const': ['warn'],
-    }
+    },
+    ignorePatterns: ["src/templates/**/files/*"]
 };

@@ -11,5 +11,9 @@
     "prefer-const": false,
     "no-empty-interface": false
   },
-  "rulesDirectory": []
+  "linterOptions": {
+    "exclude": [
+      "src/templates/**/files/*.ts"
+    ]
+  }
 }

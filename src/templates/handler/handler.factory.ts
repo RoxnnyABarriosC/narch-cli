@@ -24,7 +24,7 @@ export default class HandlerFactory
             PLURAL_NAME_CAMEL: /{PLURAL_NAME_CAMEL}/gi,
         }
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.handler.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.handler.ts'), 'utf8');
     }
 
     async handle(): Promise<void>

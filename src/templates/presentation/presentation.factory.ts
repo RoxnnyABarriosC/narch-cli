@@ -66,7 +66,7 @@ export default class PresentationFactory
     {
         this.filename = `${this.config.moduleName}.filter.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.filter.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.filter.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -84,7 +84,7 @@ export default class PresentationFactory
     {
         this.filename = `${this.config.moduleName}.sort.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.sort.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.sort.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -102,7 +102,7 @@ export default class PresentationFactory
     {
         this.filename = `${this.config.moduleName}.transformer.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/__name__.transformer.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/__name__.transformer.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -120,7 +120,7 @@ export default class PresentationFactory
     {
         this.filename = `List${this.config.moduleName}.request.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/List__name__.request.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/List__name__.request.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -138,7 +138,7 @@ export default class PresentationFactory
     {
         this.filename = `Save${this.config.moduleName}.request.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Save__name__.request.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Save__name__.request.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -156,7 +156,7 @@ export default class PresentationFactory
     {
         this.filename = `Update${this.config.moduleName}.request.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Update__name__.request.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Update__name__.request.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)

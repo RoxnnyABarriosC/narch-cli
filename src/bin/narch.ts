@@ -1,5 +1,5 @@
-#!/usr/bin/env ts-node
-// #! /usr/bin/env node
+#! /usr/bin/env node
+// #!/usr/bin/env ts-node
 
 import 'reflect-metadata';
 import {exit} from "shelljs";

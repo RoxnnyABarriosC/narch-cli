@@ -50,7 +50,7 @@ export default class InterfaceAdaptersFactory
     {
         this.filename = `I${this.config.moduleName}.domain.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/I__name__.domain.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/I__name__.domain.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -68,7 +68,7 @@ export default class InterfaceAdaptersFactory
     {
         this.filename = `${this.config.moduleName}.sql.repository.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/I__name__.repository.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/I__name__.repository.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -86,7 +86,7 @@ export default class InterfaceAdaptersFactory
     {
         this.filename = `Save${this.config.moduleName}.payload.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Save__name__.payload.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Save__name__.payload.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
@@ -104,7 +104,7 @@ export default class InterfaceAdaptersFactory
     {
         this.filename = `Update${this.config.moduleName}.payload.ts`;
 
-        this.template = fs.readFileSync(path.join(__dirname,'./files/Update__name__.payload.ts'), 'utf8');
+        this.template = fs.readFileSync(path.join(__dirname.replace('dist','src'),'./files/Update__name__.payload.ts'), 'utf8');
 
         this.template = this.template
             .replace(this.regExp.SINGULAR_NAME, this.config.moduleName)
