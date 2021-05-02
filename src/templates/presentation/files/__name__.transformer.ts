@@ -8,8 +8,8 @@ export default class {SINGULAR_NAME}Transformer extends Transformer
         return {
             id: {SINGULAR_NAME_CAMEL}.getId(),
             name: {SINGULAR_NAME_CAMEL}.name,
-            createdAt: this.transformDate({SINGULAR_NAME_CAMEL}.createdAt),
-            updatedAt: this.transformDate({SINGULAR_NAME_CAMEL}.updatedAt),
+            createdAt: this.unixDate({SINGULAR_NAME_CAMEL}.createdAt),
+            updatedAt: this.unixDate({SINGULAR_NAME_CAMEL}.updatedAt),
         };
     }
 }
