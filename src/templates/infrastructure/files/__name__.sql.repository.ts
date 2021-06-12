@@ -1,5 +1,5 @@
 import {injectable} from "inversify";
-import {IPaginator} from "@digichanges/shared-experience";
+import IPaginator from '../../App/InterfaceAdapters/Shared/IPaginator';
 import Paginator from "../../App/Presentation/Shared/Paginator";
 import ICriteria from "../../App/InterfaceAdapters/Shared/ICriteria";
 import BaseSqlRepository from "../../App/Infrastructure/Repositories/Shared/Base.sql.repository";

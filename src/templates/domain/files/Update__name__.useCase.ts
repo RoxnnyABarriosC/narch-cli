@@ -5,7 +5,6 @@ import I{SINGULAR_NAME}Repository from "../../InterfaceAdapters/I{SINGULAR_NAME}
 import IAuthService from "../../../User/InterfaceAdapters/IAuth.service";
 import I{SINGULAR_NAME}Domain from "../../InterfaceAdapters/I{SINGULAR_NAME}.domain";
 import Update{SINGULAR_NAME}Payload from "../../InterfaceAdapters/Payloads/Update{SINGULAR_NAME}.payload";
-import _ from "lodash";
 
 export default class Update{SINGULAR_NAME}UseCase
 {

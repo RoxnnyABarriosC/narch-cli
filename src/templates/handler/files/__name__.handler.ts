@@ -1,7 +1,8 @@
 import {inject} from "inversify";
 import {NextFunction, Request, Response} from 'express';
 import {controller, httpDelete, httpGet, httpPost, httpPut, request, response, next} from 'inversify-express-utils';
-import {IPaginator, StatusCode} from "@digichanges/shared-experience";
+import {StatusCode} from "@digichanges/shared-experience";
+import IPaginator from '../App/InterfaceAdapters/Shared/IPaginator';
 import Responder from "../App/Presentation/Shared/Responder";
 import {Types} from "../Types";
 import AuthorizeMiddleware from "../App/Presentation/Middlewares/Authorize.middleware";
